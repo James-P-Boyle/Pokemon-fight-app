@@ -7,7 +7,6 @@ const displayFull = (req, res) => {
 const displayById = (req, res) => {
   const { id } = req.params;
   const pokemon = jsonData.filter((e) => {
-    console.log(typeof id);
     return id == e.id;
   });
   console.log(pokemon);
@@ -15,7 +14,17 @@ const displayById = (req, res) => {
   res.send(pokemon);
 };
 
+const displayInfoById = (req, res) => {
+  const { id, info } = req.params;
+  console.log(id);
+  console.log(info);
+  const pokemon = jsonData.filter((e) => {
+    return info == e.info;
+  });
+  res.send(pokemon);
+};
 module.exports = {
   displayFull,
   displayById,
+  displayInfoById,
 };

@@ -1,10 +1,14 @@
 const express = require("express");
+const cors = require("cors");
+const pokemonRoutes = require("./routes/pokemonRoutes");
 
 const app = express();
-let jsonData = require("./DB/file.json");
+
 const port = 3000;
 
-app.use("/", require("./routes/pokemonRoutes"));
+//MIDDLEWARE
+app.use(cors());
+app.use("/test", require("./routes/pokemonRoutes"));
 app.use("/:id", require("./routes/pokemonRoutes"));
 
 app.listen(port, () => {
