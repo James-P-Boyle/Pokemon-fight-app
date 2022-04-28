@@ -6,23 +6,21 @@ const displayFull = (req, res) => {
 
 const displayById = (req, res) => {
   const { id } = req.params;
-  const pokemon = jsonData.filter((e) => {
+  const pokemon = jsonData.find((e) => {
     return id == e.id;
   });
-  console.log(pokemon);
 
   res.send(pokemon);
 };
 
 const displayInfoById = (req, res) => {
   const { id, info } = req.params;
-  console.log(id);
-  console.log(info);
-  const pokemon = jsonData.filter((e) => {
-    return info == e.info;
+  const pokemon = jsonData.find((e) => {
+    return id == e.id;
   });
-  res.send(pokemon);
+  res.send(pokemon[info]);
 };
+
 module.exports = {
   displayFull,
   displayById,
