@@ -1,14 +1,16 @@
 const express = require("express");
-const router = express.Router();
+const pokemonRouter = express.Router();
 const {
   displayFull,
   displayById,
   displayInfoById,
 } = require("../controllers/pokemon");
 
-router.get("/pokemon", displayFull);
+pokemonRouter.get("/", displayFull);
 
-router.get("/pokemon/:id", displayById);
-router.get("/pokemon/:id/:info", displayInfoById);
+pokemonRouter.get("/:id", displayById);
+pokemonRouter.get("/:id/:info", displayInfoById);
 
-module.exports = router;
+module.exports = {
+  pokemonRouter,
+};
