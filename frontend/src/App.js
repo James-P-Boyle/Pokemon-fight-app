@@ -1,6 +1,7 @@
 /* import logo from './logo.svg'; */
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import '../assets/tailwind'
 //COMPONENTS
 import Navbar from "./components/Navbar";
 import AllPokemon from "./components/AllPokemon";

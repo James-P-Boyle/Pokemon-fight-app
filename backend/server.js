@@ -10,6 +10,10 @@ const port = process.env.PORT || 3000;
 //MIDDLEWARE
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 app.use("/pokemon", pokemonRouter);
 
 app.listen(port, () => {
