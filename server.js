@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
+
 const { pokemonRouter } = require("./routes/pokemonRoutes");
 
 const app = express();
