@@ -15,9 +15,15 @@ export default function AllPokemon() {
   }, []);
 
   return (
-    <div>
+    <div class="border-b-orange-300">
       {pokemons.map((pokemon, index) => {
-        return <PokemonCard name={pokemon.name.english} />;
+        return (
+          <PokemonCard
+            id={pokemon.id}
+            key={pokemon.id}
+            name={pokemon.name.english}
+          />
+        );
       })}
     </div>
   );

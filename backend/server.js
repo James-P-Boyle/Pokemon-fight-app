@@ -5,7 +5,7 @@ const dotenv = require("dotenv").config();
 const { pokemonRouter } = require("./routes/pokemonRoutes");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 //MIDDLEWARE
 app.use(cors());
