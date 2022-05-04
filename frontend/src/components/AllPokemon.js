@@ -15,7 +15,7 @@ export default function AllPokemon() {
   }, []);
 
   return (
-    <div class="border-b-orange-300">
+    <div className="border-b-orange-300">
       {pokemons.map((pokemon, index) => {
         return (
           <PokemonCard
