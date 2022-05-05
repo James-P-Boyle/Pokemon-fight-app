@@ -4,20 +4,23 @@ import axios from "axios";
 
 export default function PokemonDetailed() {
   const [pokemon, setPokemon] = useState();
-
   const { id } = useParams();
-  console.log(process.env);
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}${id}`)
       .then((res) => setPokemon(res.data))
       .catch((err) => console.log(err));
   }, [id]);
+
   return (
-    <div>
+    <div
+      className="bg-red-700 hover:bg-red-600 
+      pl-2 border py-5 rounded-lg h-56 flex flex-col 
+      justify-center items-center shadow-xl"
+    >
       {pokemon ? (
-        <>
-          {/*        <h1>Type: {pokemon.Type[0]}</h1> */}
+        <div>
           <h2>{pokemon.name.english}</h2>
           <h2>BASE</h2>
           <p>HP: {pokemon.base.HP}</p>
@@ -26,7 +29,7 @@ export default function PokemonDetailed() {
           <p>Speed: {pokemon.base.Speed}</p>
           <p>Special Attack: {pokemon.base["Sp. Attack"]}</p>
           <p>Special Defense: {pokemon.base["Sp. Defense"]}</p>
-        </>
+        </div>
       ) : (
         "loading"
       )}
