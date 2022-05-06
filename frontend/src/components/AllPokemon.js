@@ -7,7 +7,7 @@ export default function AllPokemon() {
 
   useEffect(() => {
     axios
-      .get("https://calm-castle-85405.herokuapp.com/pokemon")
+      .get(process.env.REACT_APP_BASE_URL)
       .then((res) => setPokemons(res.data))
       .catch((err) => console.log(err));
   }, []);

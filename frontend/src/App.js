@@ -18,7 +18,7 @@ function App() {
         <Route path="/pokemon" element={<AllPokemon />} />
         <Route path="/pokemon/:id" element={<PokemonDetailed />} />
       </Routes>
-      <Cta>text</Cta>
+      <Cta>View All</Cta>
     </div>
   );
 }
