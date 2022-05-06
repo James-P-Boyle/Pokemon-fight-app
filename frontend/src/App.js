@@ -10,7 +10,7 @@ import Game from "./components/Game";
 
 function App() {
   return (
-    <div className="font-mono mx-10">
+    <div className="font-mono mx-10 md:mx-20 ">
       <Navbar />
       <Game />
       <Routes>

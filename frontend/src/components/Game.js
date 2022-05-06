@@ -1,6 +1,6 @@
 export default function Game() {
   return (
-    <div className="container bg-green-300 m-4 mx-auto p-3 flex items-center justify-center h-60">
+    <div className="container bg-yellow-300 border-8 border-blue-500 rounded-lg mx-auto p-2 flex items-center justify-center h-60">
       <div className="w-1/2">
         <h1>Choose Your Pokemon ...</h1>
         <input type="text" />
